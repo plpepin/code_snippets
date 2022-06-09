@@ -2,3 +2,28 @@ Text Node
 
 let txtNode = document.createTextNode("text")
 document.body.appendChild( txtNode )
+
+Element Node
+
+// W3Schools Example
+const para = document.createElement("p");
+para.innerText = "This is a paragraph";
+document.body.appendChild(para);
+
+Fragment Node
+
+// W3Schools Example
+const fruits = ["Banana", "Orange", "Mango"];
+
+// Create a document fragment:
+const dFrag = document.createDocumentFragment();
+
+// Add li elements to the fragment:
+for (let x in fruits) {
+  const li = document.createElement('li');
+  li.textContent = fruits[x];
+  dFrag.appendChild(li);
+}
+
+// Add fragment to a list:
+document.getElementById('myList').appendChild(dFrag);
