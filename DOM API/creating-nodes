@@ -1,0 +1,4 @@
+Text Node
+
+let txtNode = document.createTextNode("text")
+document.body.appendChild( txtNode )
