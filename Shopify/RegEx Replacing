@@ -1,0 +1,11 @@
+/* Replace Font URL with fonts from the Content (files) */
+/* Click Regexp checkbox */
+
+/* Notes:
+* As of now: 
+  * Works with 2 words seperated by a '.' or not
+  
+*/  
+
+Pattern:  url\('([\w-]+\.[\w-]+)'\)      
+Replace:  url\('[\w-]+\.[\w-]+'\)
