@@ -1,11 +1,11 @@
-/* Replace Font URL with fonts from the Content (files) */
+/* Replace Font URL with fonts from the Content (Hosted files) */
 /* Click Regexp checkbox */
 
 /* Notes:
 * As of now: 
   * Works with 2 words seperated by a '.' or not
-  
+  * CSS file must be a .css.liquid
 */  
 
 Pattern:  url\('([\w-]+\.[\w-]+)'\)      
-Replace:  url\('[\w-]+\.[\w-]+'\)
+Replace:  url('{{ '$1' | file_url }}')
