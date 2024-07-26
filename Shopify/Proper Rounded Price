@@ -1,0 +1,4 @@
+// This is how I was able to most closely match the discounted price calculated by Shopify when using Percentages
+// cart_discount is a setting I created. Can be changed to a number like 50 for 50% off
+
+{%- assign sales_price = price | times: settings.cart_discount | divided_by: 100.0 | ceil -%}
