@@ -1,0 +1,6 @@
+// Collapse All rows in Bulk Editor - 2025
+
+setInterval( () => {
+    button = document.querySelector('._FirstColumn_gqi6a_115 button[aria-expanded="true"]');
+    if ( button ) button.click() 
+}, 1 )
