@@ -1,4 +1,5 @@
 // Collapse All rows in Bulk Editor - 2025
+// If you change window, it may stop working but since it always looks for a row thats expanded, executing the script will simply resume the task 
 
 int845315 = setInterval( () => {
     button = document.querySelector('._FirstColumn_gqi6a_115 button[aria-expanded="true"]');
