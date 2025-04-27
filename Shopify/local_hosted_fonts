@@ -1,6 +1,6 @@
 {%- comment %} Preload = Flicker prevention {% endcomment -%}
 {%- assign font_name = 'Inter' %}
-{% for font_weight in (1..7) -%}
+{% for font_weight in (1..9) -%}
   {%- capture font_url -%}
     {{ font_name }}_{%- cycle 'Thin', 'ExtraLight', 'Light', 'Regular', 'Medium', 'SemiBold', 'Bold', 'ExtraBold', 'Black' -%}.woff2
   {%- endcapture -%}
@@ -15,7 +15,7 @@
       font-style: normal;{{  -}}
       font-display: swap;{{  -}}
       src: url({{ font_url | asset_url }}) format("woff2"),{{  -}}
-          url() format("woff");{{  -}}
+           url() format("woff");{{  -}}
     }{{  -}}
   {% endcapture -%}
 {%- endfor -%}
