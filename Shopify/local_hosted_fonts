@@ -1,6 +1,6 @@
 {%- comment %} Preload = Flicker prevention {% endcomment -%}
-{%- assign font_name = 'Inter' -%}
-{%- for font_weight in (1..7) -%}
+{%- assign font_name = 'Inter' %}
+{% for font_weight in (1..7) -%}
   {%- capture font_url -%}
     {{ font_name }}_{%- cycle 'Thin', 'ExtraLight', 'Light', 'Regular', 'Medium', 'SemiBold', 'Bold', 'ExtraBold', 'Black' -%}.woff2
   {%- endcapture -%}
@@ -8,8 +8,8 @@
   {% comment %} crossorigin="anonymous" {% endcomment %}
 
   {%- capture font_faces -%}
-    {{ font_faces }}
-    @font-face { {{  -}}
+    {{- font_faces | strip }}
+    @font-face { {{-  -}}
       font-family: {{ font_name }};{{  -}}
       font-weight: {{  font_weight }}00;{{  -}}
       font-style: normal;{{  -}}
@@ -21,5 +21,5 @@
 {%- endfor -%}
 
 <style>
-  {{ font_faces }}
+{{ font_faces }}
 </style>
